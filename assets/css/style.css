@@ -16,25 +16,35 @@ h2{
 HEADER
 */
 
-header{
-  position: fixed;
-}
-
 .nav-bar{
-  text-align: right;
+  position: fixed;
+  right: 0;
+  z-index: 100;
 }
 
 .nav-bar li{
   display: inline-block;
-  height: 25px;
-  width: 25px;
+  height: 40px;
+  width: 40px;
+  line-height: 40px;
+
   border-radius: 50%;
+
+  text-align: center;
 
   margin-top: 30px;
   margin-right: 30px;
 
   background-color: white;
+  box-shadow: 1px 1px 5px 0.5px #2a2a2a;
+}
 
+.nav-bar li:active{
+  transform: scale(0.8);
+}
+
+.nav-bar li:hover{
+  box-shadow: 2px 2px 5px 1px #2a2a2a;
 }
 
 .nav-bar li a{
@@ -47,12 +57,23 @@ header{
 
 /* Scarpe */
 
-#scarpa-1{
-  background-color: #F50101;
+#scarpa-1, #scarpa-2, #scarpa-3{
   height: 100vh;
+  position: relative;
+}
+
+#scarpa-1 img, #scarpa-2 img, #scarpa-3 img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 
 }
 
+
+#scarpa-1{
+  background-color: #F50101;
+}
 
 #scarpa-1 h2, #scarpa-2 h2{
   color: #FEFF01;
@@ -61,8 +82,6 @@ header{
 
 #scarpa-2{
   background-color: #248000;
-  height: 100vh;
-
 }
 
 #scarpa-2 h2{
@@ -72,8 +91,6 @@ header{
 
 #scarpa-3{
   background-color: #FEFF01;
-  height: 100vh;
-
 }
 
 #scarpa-3 h2{
